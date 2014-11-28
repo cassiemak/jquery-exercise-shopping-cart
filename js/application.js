@@ -10,7 +10,6 @@ $(document).ready(function(){
     //   var totalPrice += $("#items-list .item-price")[i]* $("#items-list .item-qty")[i]; 
     //   return totalPrice; 
     //   }
-
     $("#calc-prices-button").click(function(){
       // create & define a function 
       var calcTotalPrice = function(){
@@ -34,6 +33,16 @@ $(document).ready(function(){
           // get quantity with respective i
           var numQuantity = $("#items-list .item-qty .quantity ")[i];
           numQuantity = $(numQuantity).val();
+          // if ($.isNumeric("354") === true) {}
+          if ($.isNumeric(numQuantity) === true){
+              console.log("it's a number");
+            }
+            else if (numQuantity === "") {
+              console.log("it's blank");
+            }
+            else {
+              alert("Please enter a valid number!");
+            }
           console.log(numQuantity);
 
           //get totalPrice 
@@ -48,6 +57,6 @@ $(document).ready(function(){
       };
       // call the function, when you click, it calculate total price
       calcTotalPrice();
-    });
+  });
 //closing .ready function 
 });
