@@ -1,15 +1,7 @@
 // Always have the .ready function in js file
 $(document).ready(function(){
 
-  // $("#item-list").item("price")
-  // $("#item-list").item("qty")
-  // $("#items-list .item-price")[i]* $("#items-list .item-qty")[i]
-  // $("#item-list").children('item-price') 
-  // $("#item-list > item-price") 
-      //   var caltotalPrice = function (for i=0; i < $("items-list").length; i++;) {
-    //   var totalPrice += $("#items-list .item-price")[i]* $("#items-list .item-qty")[i]; 
-    //   return totalPrice; 
-    //   }
+    // The button that trigers calculating total
     $("#calc-prices-button").click(function(){
       // create & define a function 
       var calcTotalPrice = function(){
@@ -18,10 +10,8 @@ $(document).ready(function(){
         // make a for loop
         for (var i=0; i < $("#items-list .item-price").length; i++){
           // do sth
-
           // this is wrong - totalPrice += $("#items-list .item-price")[i].text * $("#items-list .item-qty")[i].text; 
           // totalPrice += 1; 
-
           // get price with respective i
           var price = $("#items-list .item-price")[i];
           price = $(price).text();
@@ -29,7 +19,6 @@ $(document).ready(function(){
           price = price.replace ("$"," ");
           price = Number(price);
           console.log(price);
-          
           // get quantity with respective i
           var numQuantity = $("#items-list .item-qty .quantity ")[i];
           numQuantity = $(numQuantity).val();
@@ -57,6 +46,12 @@ $(document).ready(function(){
       };
       // call the function, when you click, it calculate total price
       calcTotalPrice();
-  });
+    });
+    
+    $(".remove-button").bind("click",function(){
+      // $(this).remove(); --> remove the clicked button only
+      // $("#items-list.row").remove(); --> remove the whole page
+      console.log("remove something");
+    });
 //closing .ready function 
 });
