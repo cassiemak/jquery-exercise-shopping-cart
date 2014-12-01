@@ -51,7 +51,8 @@ $(document).ready(function(){
     $(".remove-button").bind("click",function(){
       // $(this).remove(); --> remove the clicked button only
       // $("#items-list.row").remove(); --> remove the whole page
-      console.log("remove something");
+      $(this).parent().parent().remove(); 
+      console.log("removed something");
     });
 //closing .ready function 
 });
