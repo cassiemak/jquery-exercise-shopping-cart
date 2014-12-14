@@ -1,3 +1,31 @@
-#total-price {
-  font-size: 30px;
+.cart-title {
+  padding-bottom: 30px;
 }
+
+.qty {
+  text-align: right; 
+}
+
+div{
+  padding: 2px;
+}
+
+.total-line {
+  font-size: 30px;
+  margin: 20px 0px 10px 0px;
+  text-align: right;
+}
+
+#total-price {
+  text-align: left;
+}
+
+.resizedBox {
+  width: 80px;
+}
+
+input {
+  /*color: gray;*/
+  padding: 2px;
+}
+
